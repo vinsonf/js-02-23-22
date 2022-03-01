@@ -1,33 +1,15 @@
-// Datatypes
-// Primitives
-// String = "Hello World" | 'Hello World' | `Hello World`
-// Number = 1 | 1.1 | 1e10 | Infinity | -Infinity | NaN
-// Boolean = true | false
-
-number = Number('1');
-number = 1;
-
-string = String(1);
-string = 'Hello World';
-
-boolean = Boolean(1);
-boolean = true;
+const inputs = document.querySelectorAll('input');
+function calculate() {
+    // always convert to number when gathering data from inputs
+    const total = +inputs[0].value;
+    const percentage = +inputs[2].value;
+    const partySize = +inputs[1].value;
 
 
-// other primitives
-// null
-// undefined
-// Symbol
+    const tip = total / 100 * percentage;
+    const grandTotal = total + tip;
+    const perPerson = grandTotal / partySize;
 
 
-// Complex/Compound
-// Array = [1, 2, 3] // list(s)
-// Object = { name: 'John', age: 30 } // map(s) // dictionary(s)
-
-array = Array(1, 2, 3);
-array = [{name: 'Larry', favoriteFood: [{name: 'Pizza'}]}, [], true, 1, 'Hello World'];
-
-object = Object({ name: 'John', age: 30 });
-object = { name: 'John', age: 30 };
-
-console.log(array);
+    inputs[3].value = perPerson.toFixed(2);
+}

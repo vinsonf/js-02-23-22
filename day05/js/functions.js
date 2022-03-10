@@ -15,21 +15,51 @@ function askUserForANumber(iteration) {
 }
 
 function checkForNumber(value) {
-    if (typeof value !== 'string') {
+    if (typeof value !== 'string') { // case they cancel
         return value;
     }
     if (isNaN(parseInt(value))){
-        return checkForNumber(askUserForANumber());
+        return checkForNumber(askUserForANumber()); // ask again
     }
-    return parseInt(value);
+    return parseInt(value); // return the number
 }
 
-const firstNumber = checkForNumber(askUserForANumber(1));
-const secondNumber = checkForNumber(askUserForANumber(2));
+// const firstNumber = checkForNumber(askUserForANumber(1));
+// const secondNumber = checkForNumber(askUserForANumber(2));
 
-if (firstNumber && secondNumber) {
-    alert(Math.max(firstNumber, secondNumber));
-} else {
-    alert("Sorry you didn't want to play")
+// if (!isNaN(firstNumber) && !isNaN(secondNumber)) {
+//     alert(Math.max(firstNumber, secondNumber));
+// } else {
+//     alert("Sorry you didn't want to play")
+// }
+
+
+// reasons to have a function
+// 1. you can reuse code
+// 2. use functions to make your code more readable (name)
+// 3. use it later
+
+
+
+
+// function declaration vs expression
+
+// function declaration example
+
+// sayHello();
+// sayHi();
+const name = 'John';
+
+function sayHello() {
+    alert('hello');
 }
 
+const sayHi = function() { // function expression: assigned to a variable an anonymous function
+    alert('hi');
+}
+
+const myArray = [1,2,3,4,5];
+myArray.forEach( (number) => {
+   
+    console.log(number);
+});

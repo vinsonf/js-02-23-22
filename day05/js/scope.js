@@ -71,11 +71,11 @@ function createCounter() {
         a: 10,
         increment() {
             count++;
-            console.log(count);
+            return count;
         },
         decrement() {
-            count--;
-            console.log(count);
+            return --count;
+           
         },
         logA() {
             console.log(this.a);
@@ -86,10 +86,10 @@ function createCounter() {
 }
 
 const myCounter = createCounter();
-myCounter.increment();
+console.log( myCounter.increment() );
 myCounter.increment();
 myCounter.increment();
 myCounter.decrement();
 myCounter.decrement();
 myCounter.logA();
-
+console.log(myCounter.a);

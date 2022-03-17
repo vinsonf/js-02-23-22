@@ -95,3 +95,6 @@ for (let i = 1; i <= 100; i++) {
             li.innerText = i;
     }
 }
+
+console.log('test')
+JSON.stringify(document.body);

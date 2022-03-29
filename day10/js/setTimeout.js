@@ -55,3 +55,5 @@ addUserButton.addEventListener('click', () => {
         }, 4000);
     });
 });
+
+addUserButton.disabled= true;

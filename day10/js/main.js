@@ -42,4 +42,4 @@ setInterval(() => {
     hit = false;
     console.log(score);
 
-}, 2000)
+}, 2000);

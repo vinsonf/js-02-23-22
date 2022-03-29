@@ -1,4 +1,5 @@
-import {create} from './html.js';
+import create, { addClass} from './html.js';
 
 
-create('h1', 'Welcome to my page!', document.body);
+const h1 = create('h1', 'Welcome to my page!', document.body);
+addClass(h1, 'big');

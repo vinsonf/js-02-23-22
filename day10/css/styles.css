@@ -1,0 +1,77 @@
+.invisible {
+  height: 0;
+  overflow: hidden;
+}
+.visible {
+    height: 1rem;
+    overflow: hidden;
+  }
+
+p {
+    transition: all 0.5s ease;
+}
+
+
+/* Game */
+
+.box {
+    width: 600px;
+    height: 300px;
+    background-color: #aaaaaa;
+    border: 1px solid black;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+
+.block {
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    border: 1px solid black;
+    position: absolute;
+    top: 250px;
+    left: 600px;
+
+    animation: slideLeft 2s infinite linear;
+}
+
+@keyframes slideLeft {
+    0% {
+        left: 600px;
+    }
+    100% {
+        left: -50px;
+    }
+}
+
+
+.player {
+    width: 50px;
+    height: 50px;
+    background-color: blue;
+    border: 1px solid black;
+    position: absolute;
+    top: 250px;
+}
+
+.jumping {
+    animation: jump 1s  linear;
+}
+
+@keyframes jump {
+    0% {
+        top: 250px;
+    }
+    20% {
+        top: 150px;
+    }
+    70% {
+        top: 150px;
+    }
+    100% {
+        top: 250px;
+    }
+    
+}
+

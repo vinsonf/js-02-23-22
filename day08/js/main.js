@@ -41,6 +41,10 @@ class Face {
         this.head.style.backgroundColor = color;
         this.leftEye = new Eye(this.head, '15px');
         this.rightEye = new Eye(this.head, '55px');
+        this.head.addEventListener('click', () => {
+            this.leftEye.blink();
+            this.rightEye.blink();
+        })
     }
 }
 
@@ -57,7 +61,7 @@ class Dog {
         this.body.style.borderRadius = '20%';
         this.body.style.position = 'absolute';
         this.body.style.top = top;
-        this.body.style.backgroundColor = color
+        this.body.style.backgroundColor = color;
     }
 
     blink() {
@@ -75,7 +79,7 @@ const spot = new Dog('Spot', 'Yellow', '500px');
 
 console.log(dog);
 
-dog.blink();
+
 
 setInterval(() => {
     Math.random() > .5 ? dog.blink() : dog.wink();

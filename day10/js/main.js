@@ -24,7 +24,6 @@ setInterval(() => {
     const left = parseInt(getComputedStyle(block).left);
     const top = parseInt(getComputedStyle(player).top);
     if (left < 50 && left > 0) {
-    
         if (top >= 200) {
             hit = true;
         }
